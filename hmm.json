@@ -208,9 +208,11 @@
       "url": "https://github.com/fponticelli/thx.semver"
     },
     {
-      "name": "format",
-      "type": "newgrounds",
-      "version": "2.0.3"
+      "name": "newgrounds",
+      "type": "git",
+      "dir": null,
+      "ref": "master",
+      "url": "https://github.com/Geokureli/Newgrounds"
     }
   ]
 }
