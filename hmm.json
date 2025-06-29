@@ -213,6 +213,13 @@
       "dir": null,
       "ref": "master",
       "url": "https://github.com/Geokureli/Newgrounds"
+    },
+    {
+      "name": "hmm",
+      "type": "git"
+      "dir": null,
+      "ref": "master"
+      "url": "https://github.com/andywhite37/hmm"
     }
   ]
 }
