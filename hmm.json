@@ -11,7 +11,7 @@
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": "logVolume",
+      "ref": "dev-6.0.0-latest",
       "url": "https://github.com/FunkinDroidTeam/flixel"
     },
     {
