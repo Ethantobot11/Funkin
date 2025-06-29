@@ -16,8 +16,10 @@
     },
     {
       "name": "flixel-addons",
-      "type": "haxelib",
-      "version": 3.3.0
+      "type": "git",
+      "dir": null,
+      "ref": "dev",
+      "url": "https://github.com/HaxeFlixel/flixel-addons"
     },
     {
       "name": "flixel-text-input",
