@@ -94,7 +94,7 @@
       "name": "hxcpp",
       "type": "git",
       "dir": null,
-      "ref": "c6bac3d6c7d683f25104296b2f4c50f8c90b8349",
+      "ref": "master",
       "url": "https://github.com/cortex-engine/hxcpp"
     },
     {
@@ -115,7 +115,7 @@
       "name": "hxjsonast",
       "type": "git",
       "dir": null,
-      "ref": "20e72cc68c823496359775ac1f06500e67f189d5",
+      "ref": "master",
       "url": "https://github.com/nadako/hxjsonast/"
     },
     {
