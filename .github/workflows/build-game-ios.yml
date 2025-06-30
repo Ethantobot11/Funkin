@@ -11,11 +11,12 @@ jobs:
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.6
+          haxe-version: 4.3.7
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
+          haxelib run reinstall hmm
           haxelib run lime rebuild hxcpp
       - name: Compile
         run: haxelib run lime build ios -nosign
