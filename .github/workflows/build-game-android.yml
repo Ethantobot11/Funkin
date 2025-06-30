@@ -18,7 +18,7 @@ jobs:
         run: |
           haxelib git hmm https://github.com/FunkinCrew/hmm.git skip-deps --quiet
           haxelib run hmm install --quiet 
-          haxelib run hmm reinstall --quiet
+          haxelib run hmm reinstall
           haxelib run lime rebuild hxcpp
       - name: Configure Android
         run: |
