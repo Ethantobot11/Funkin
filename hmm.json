@@ -11,15 +11,15 @@
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": "dev-6.0.0-latest",
+      "ref": "logVolume",
       "url": "https://github.com/FunkinDroidTeam/flixel"
     },
     {
       "name": "flixel-addons",
       "type": "git",
       "dir": null,
-      "ref": "dev",
-      "url": "https://github.com/HaxeFlixel/flixel-addons"
+      "ref": "7424db4e9164ff46f224a7c47de1b732d2542dd7",
+      "url": "https://github.com/FunkinCrew/flixel-addons"
     },
     {
       "name": "flixel-text-input",
