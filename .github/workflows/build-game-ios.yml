@@ -18,10 +18,9 @@ jobs:
           haxelib run hmm install --quiet
           haxelib run hmm reinstall
           haxelib run lime rebuild hxcpp
-          haxelib run lime rebuild mac
           haxelib run lime rebuild ios
       - name: Compile
-        run: haxelib run lime build ios -nosign
+        run: haxelib run lime build ios -nosign -D
       - name: Make .ipa
         run: |
           cd export/*/ios/build/*-iphoneos
