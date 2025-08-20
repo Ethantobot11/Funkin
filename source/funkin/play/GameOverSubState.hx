@@ -19,6 +19,7 @@ import funkin.ui.story.StoryMenuState;
 import funkin.util.MathUtil;
 import funkin.effects.RetroCameraFade;
 import flixel.math.FlxPoint;
+import funkin.mobile.util.TouchUtil;
 
 /**
  * A substate which renders over the PlayState when the player dies.
@@ -164,6 +165,10 @@ class GameOverSubState extends MusicBeatSubState
 
     // The conductor now represents the BPM of the game over music.
     Conductor.instance.update(0);
+
+    #if mobile
+    addBackButton(FlxG.width * 0.77, FlxG.height * 0.84, FlxColor.WHITE, goBack);
+    #end
   }
 
   @:nullSafety(Off)
@@ -259,7 +264,9 @@ class GameOverSubState extends MusicBeatSubState
     }
 
     // KEYBOARD ONLY: Restart the level when pressing the assigned key.
-    if (controls.ACCEPT && blueballed && !mustNotExit)
+    if ((controls.ACCEPT #if mobile || (TouchUtil.justPressed && !TouchUtil.overlaps(backButton) && canInput) #end)
+      && blueballed
+      && !mustNotExit)
     {
       blueballed = false;
       confirmDeath();
@@ -539,6 +546,11 @@ class GameOverSubState extends MusicBeatSubState
   public static function playBlueBalledSFX():Void
   {
     blueballed = true;
+
+    #if mobile
+    if (Preferences.vibration) lime.ui.Haptic.vibrate(500, 1000);
+    #end
+      
     if (Assets.exists(Paths.sound('gameplay/gameover/fnf_loss_sfx' + blueBallSuffix)))
     {
       FunkinSound.playOnce(Paths.sound('gameplay/gameover/fnf_loss_sfx' + blueBallSuffix));
