@@ -30,7 +30,8 @@ class Project extends HXProject {
 	/**
 	 * The game's name. Used as the default window title.
 	 */
-	static final TITLE:String = "Friday Night Funkin'";
+    static final TITLE:String = "Friday Night Funkin'";
+  static final TITLEIOS:String = "FridayNightFunkin";
 
 	/**
 	 * The name of the generated executable file.
@@ -383,6 +384,10 @@ class Project extends HXProject {
 			this.window.resizable = false;
 			this.window.width = 0;
 			this.window.height = 0;
+        }
+
+	    if (isAndroid()) {
+			this.excludeArchitectures.push(Architecture.ARMV7);
 		}
 	}
 
